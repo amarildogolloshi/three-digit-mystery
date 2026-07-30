@@ -1,0 +1,321 @@
+/* =========================
+   PAGE
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+/* =========================
+   TIMER
+========================= */
+
+#timer {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+/* =========================
+   HINTS
+========================= */
+
+#hints {
+    margin: 20px 0;
+}
+
+.hint {
+    background: #eef5ff;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 5px solid #4285f4;
+    border-radius: 6px;
+}
+
+.locked {
+    background: #e0e0e0;
+    color: #777;
+    opacity: .6;
+    border-left: 5px solid #999;
+}
+
+/* =========================
+   VAULT
+========================= */
+
+.vault {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.safe-door {
+
+    background:
+        radial-gradient(
+            circle,
+            #cfcfcf,
+            #7b7b7b,
+            #4a4a4a
+        );
+
+    border: 12px solid #333;
+    border-radius: 25px;
+
+    padding: 30px;
+
+    width: 500px;
+
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,.3),
+        0 10px 25px rgba(0,0,0,.5);
+
+    transition: transform 1s ease;
+}
+
+.safe-door.opened {
+    transform: rotate(-15deg);
+}
+
+/* =========================
+   VAULT TITLE
+========================= */
+
+.vault-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   COMBINATION LOCK
+========================= */
+
+.combination-lock {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* =========================
+   WHEELS
+========================= */
+
+.wheel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   UP / DOWN BUTTONS
+========================= */
+
+.wheel-btn {
+
+    width: 60px;
+    height: 40px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eeeeee,
+            #bcbcbc
+        );
+
+    box-shadow:
+        2px 2px 6px rgba(0,0,0,.3),
+        inset 1px 1px 2px rgba(255,255,255,.5);
+
+    transition:
+        transform .15s,
+        background .15s;
+}
+
+.wheel-btn:hover {
+    background: #f8f8f8;
+    transform: scale(1.05);
+}
+
+.wheel-btn:active {
+    transform: scale(.95);
+}
+
+/* =========================
+   NUMBER WINDOW
+========================= */
+
+.wheel-window {
+
+    width: 90px;
+    height: 100px;
+
+    margin: 10px 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #111;
+
+    border: 4px solid #555;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,255,0,.2),
+        0 0 10px rgba(0,0,0,.5);
+}
+
+/* =========================
+   DIGITS
+========================= */
+
+.wheel-digit {
+
+    font-family: "Courier New", monospace;
+    font-size: 60px;
+    font-weight: bold;
+
+    color: #00ff00;
+
+    user-select: none;
+}
+
+/* =========================
+   DIGIT SPIN ANIMATION
+========================= */
+
+.wheel-digit.spin {
+    animation: spinDigit .2s ease;
+}
+
+@keyframes spinDigit {
+
+    0% {
+        transform: translateY(-20px);
+        opacity: .3;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.buttons button {
+
+    padding: 12px 20px;
+
+    margin: 0 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background: #4285f4;
+    color: white;
+
+    transition: .2s;
+}
+
+.buttons button:hover {
+    background: #3367d6;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+#result {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#attempts {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .combination-lock {
+        gap: 10px;
+    }
+
+    .wheel-window {
+        width: 70px;
+        height: 80px;
+    }
+
+    .wheel-digit {
+        font-size: 48px;
+    }
+
+    .wheel-btn {
+        width: 50px;
+        height: 35px;
+    }
+
+    .safe-door {
+        width: auto;
+    }
+}

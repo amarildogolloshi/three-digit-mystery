@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock the Vault</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+<div class="container">
+    <h1>🔐 Unlock the Vault</h1>
+
+    <p>Use the clues below to discover the secret 3-digit code.</p>
+
+     <div id="timer">⏱️ Time: 0s</div>
+
+    <div id="hints"></div>
+
+   <div class="combination-lock">
+
+    <div class="wheel" data-index="0">
+        <button class="wheel-btn up">▲</button>
+        <div class="wheel-window">
+            <div class="wheel-digit" id="digit0">0</div>
+        </div>
+        <button class="wheel-btn down">▼</button>
+    </div>
+
+    <div class="wheel" data-index="1">
+        <button class="wheel-btn up">▲</button>
+        <div class="wheel-window">
+            <div class="wheel-digit" id="digit1">0</div>
+        </div>
+        <button class="wheel-btn down">▼</button>
+    </div>
+
+    <div class="wheel" data-index="2">
+        <button class="wheel-btn up">▲</button>
+        <div class="wheel-window">
+            <div class="wheel-digit" id="digit2">0</div>
+        </div>
+        <button class="wheel-btn down">▼</button>
+    </div>
+
+</div>
+
+
+    <div class="buttons">
+        <button id="checkBtn">Unlock</button>
+        <button id="newGameBtn">New Game</button>
+    </div>
+
+    <div id="result"></div>
+    <div id="attempts"></div>
+</div>
+
+<script src="./javascripts/script.js" defer></script>
+</body>
+</html>
