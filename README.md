@@ -4,7 +4,11 @@ A fun puzzle game built with **HTML, CSS, and Vanilla JavaScript**.
 
 Players must crack a secret 3-digit vault code using clues and logic. Each game generates a new random code, and additional hints are revealed after incorrect guesses.
 
-## 🎮 Play Online6 7Try the game here:8 9👉 **[Play Three-Digit Mystery](https://amarildogolloshi.github.io/three-digit-mystery/)**
+## 🎮 Play Online
+
+Try the game here:
+
+👉 **[Play Three-Digit Mystery](https://amarildogolloshi.github.io/three-digit-mystery/)**
 
 ## 🎮 How to Play
 
